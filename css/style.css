@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.hero {
+  background: #e9f0f4;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3;
+}
+
+.skills-container, .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card, .project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.hero h1 span {
+  color: #007bff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  padding: 12px 24px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-out 2.5s forwards;
+}
+
+.intro-text {
+  font-size: 2.5rem;
+  animation: scaleUp 2s ease;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* يخليها تنزل تحت إذا صغرت الشاشة */
+}
+.hero-title h1 {
+  margin: 0;
+}
+.hero-title p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #444;
+}
